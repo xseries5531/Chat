@@ -26,6 +26,32 @@ commands:
     repeat: 50
     message: true
 
+# Server Links in ESC Menu. 1.21+ only.
+# Link types: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ServerLinks.Type.html
+# You do not have to set the link type, it is optional. Using `REPORT_BUG`, it may appear on disconnect/crash screens.
+server-links:
+  enabled: true
+  links:
+    #      0:
+    #        type: COMMUNITY # Example of type link. These links are translated with Minecraft.
+    #        link: "https://discord.gg/"
+    1:
+      name: "<rainbow>-----------------------------------</rainbow>"
+      link: "https://example.com"
+    2:
+      name: "<b>Our Website</b>"
+      link: "https://example.com"
+    3:
+      name: "⭐ <b><gold>Donation Store</gold></b> ⭐"
+      link: "https://buy.example.com/"
+    4:
+      name: "<b>Staff Chat</b>"
+      link: "https://discord.gg/"
+      permission: "advancedchat.staffchat"
+    5:
+      name: "<rainbow>-----------------------------------</rainbow>"
+      link: "https://example.com"
+
 # Games
 # Custom games can be found in `games` folder
 # Guide on how to create custom games can be found here: https://chat.advancedplugins.net/features/chat-games
@@ -34,6 +60,11 @@ games:
   enabled: true
   # How often should the chat games start?
   interval: 300
+
+# If you use the %player_head_N_N% placeholder anywhere, you need to include the sizes used here, for us to properly fetch the player head.
+# The size is the first number (N)
+player-head-cache:
+  - 8
 
 # Configure warn command
 warn:
